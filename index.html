@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ironwell &amp; Vance — Publishers of Military History &amp; Economic Thought</title>
+<meta name="description" content="Ironwell & Vance is an independent publishing house printing first editions on military history, statecraft, and economic theory since 1894." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --ink:#191512;
+  --ink-2:#221d18;
+  --ink-3:#2a241e;
+  --parchment:#ece3d0;
+  --parchment-dim:#bdb29a;
+  --muted:#8a8170;
+  --gold:#c9a24a;
+  --gold-soft:#a07f33;
+  --gold-bright:#e2c074;
+  --oxblood:#6d2120;
+  --border:rgba(201,162,74,0.18);
+  --border-strong:rgba(201,162,74,0.32);
+
+  --font-display:"Cormorant Garamond","Times New Roman",serif;
+  --font-serif:"EB Garamond",Georgia,serif;
+  --font-sans:"Inter",ui-sans-serif,system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html,body{background:var(--ink);color:var(--parchment);font-family:var(--font-serif);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;letter-spacing:-0.01em;line-height:1.05;}
+::selection{background:var(--gold);color:var(--ink);}
+
+.wrap{max-width:1320px;margin:0 auto;padding:0 24px;}
+@media(min-width:768px){.wrap{padding:0 40px;}}
+
+.imperial{font-family:var(--font-sans);font-size:11px;letter-spacing:0.32em;text-transform:uppercase;}
+.imperial-xs{font-family:var(--font-sans);font-size:10px;letter-spacing:0.32em;text-transform:uppercase;}
+.gold{color:var(--gold);}
+.muted{color:var(--muted);}
+.dim{color:var(--parchment-dim);}
+.italic{font-style:italic;}
+.gold-grad{background:linear-gradient(180deg,#e9c97a 0%,#9a7b2e 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.paper-grain{background-image:radial-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),radial-gradient(rgba(255,255,255,0.018) 1px,transparent 1px);background-size:3px 3px,7px 7px;background-position:0 0,1px 2px;}
+.vignette{background:radial-gradient(ellipse at center,transparent 40%,rgba(15,12,9,0.7) 100%);}
+.rule-gold{height:1px;background:linear-gradient(to right,transparent,var(--gold) 20%,var(--gold) 80%,transparent);opacity:.55;}
+
+/* HEADER */
+header.site{position:absolute;inset:0 0 auto 0;z-index:30;}
+header.site .bar{display:flex;align-items:center;justify-content:space-between;padding:24px 0;}
+@media(min-width:768px){header.site .bar{padding:32px 0;}}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand-name{font-family:var(--font-display);font-size:18px;letter-spacing:.01em;}
+.brand-sub{font-family:var(--font-sans);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);margin-top:2px;}
+nav.primary{display:none;gap:40px;}
+@media(min-width:900px){nav.primary{display:flex;}}
+nav.primary a{font-family:var(--font-sans);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);transition:color .3s;}
+nav.primary a:hover{color:var(--parchment);}
+.btn-ghost{display:none;border:1px solid rgba(201,162,74,.4);padding:10px 20px;font-family:var(--font-sans);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);transition:all .3s;}
+.btn-ghost:hover{background:var(--gold);color:var(--ink);}
+@media(min-width:900px){.btn-ghost{display:inline-block;}}
+
+.crest{width:36px;height:36px;color:var(--gold);animation:flicker 4s ease-in-out infinite;}
+@keyframes flicker{0%,100%{opacity:1;}50%{opacity:.85;}}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;isolation:isolate;}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.7;z-index:-2;}
+.hero-veil{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(25,21,18,.8),rgba(25,21,18,.55),var(--ink));z-index:-1;}
+.hero-vignette,.hero-grain{position:absolute;inset:0;pointer-events:none;}
+.hero-grain{opacity:.5;}
+.hero-inner{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding-top:180px;padding-bottom:80px;}
+@media(min-width:768px){.hero-inner{padding-top:208px;padding-bottom:112px;}}
+.eyebrow{display:flex;align-items:center;gap:16px;color:rgba(201,162,74,.85);}
+.eyebrow .line{height:1px;width:48px;background:rgba(201,162,74,.6);}
+h1.headline{font-family:var(--font-display);font-weight:500;font-size:clamp(44px,7vw,100px);line-height:.95;letter-spacing:-.015em;margin-top:32px;max-width:880px;}
+h1.headline .l1{font-style:italic;display:block;}
+h1.headline .l2,h1.headline .l3{display:block;}
+.lede{margin-top:32px;max-width:560px;font-size:18px;line-height:1.65;color:rgba(236,227,208,.82);}
+@media(min-width:768px){.lede{font-size:20px;}}
+.cta-row{margin-top:48px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 28px;font-family:var(--font-sans);font-size:11px;letter-spacing:.32em;text-transform:uppercase;transition:all .35s;}
+.btn-primary{background:var(--parchment);color:var(--ink);}
+.btn-primary:hover{background:var(--gold);}
+.btn-primary .ar{transition:transform .35s;}
+.btn-primary:hover .ar{transform:translateX(4px);}
+.btn-link{color:var(--gold);border-bottom:1px solid rgba(201,162,74,.5);padding:0 0 4px;font-family:var(--font-sans);font-size:11px;letter-spacing:.32em;text-transform:uppercase;transition:color .3s;}
+.btn-link:hover{color:var(--parchment);}
+
+.metrics{margin-top:80px;display:grid;grid-template-columns:repeat(2,1fr);gap:32px 48px;border-top:1px solid var(--border);padding-top:40px;}
+@media(min-width:768px){.metrics{grid-template-columns:repeat(4,1fr);}}
+.metric .n{font-family:var(--font-display);font-size:40px;line-height:1;background:linear-gradient(180deg,#e9c97a,#9a7b2e);-webkit-background-clip:text;background-clip:text;color:transparent;}
+@media(min-width:768px){.metric .n{font-size:48px;}}
+.metric .l{margin-top:8px;font-family:var(--font-sans);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);}
+
+/* MARQUEE */
+.marquee{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(34,29,24,.5);}
+.marquee .row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 40px;padding:24px 0;}
+.marquee .label{font-family:var(--font-sans);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);}
+.marquee .item{font-family:var(--font-display);font-style:italic;font-size:18px;color:rgba(236,227,208,.7);}
+
+/* SECTION shared */
+section.block{padding:96px 0;position:relative;overflow:hidden;}
+@media(min-width:768px){section.block{padding:144px 0;}}
+.eyebrow-mini{font-family:var(--font-sans);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:rgba(201,162,74,.85);}
+
+/* FEATURED */
+.featured-grid{display:grid;grid-template-columns:1fr;gap:64px;align-items:center;}
+@media(min-width:900px){.featured-grid{grid-template-columns:5fr 7fr;gap:80px;}}
+.book-frame{position:relative;}
+.book-frame .glow{position:absolute;inset:-24px;background:linear-gradient(135deg,rgba(109,33,32,.35),transparent);filter:blur(40px);z-index:-1;}
+.book-frame .shot{position:relative;aspect-ratio:3/4;background:var(--ink-2);box-shadow:0 40px 80px -30px rgba(0,0,0,.9);overflow:hidden;}
+.book-frame .shot img{width:100%;height:100%;object-fit:cover;}
+.book-frame .caption{margin-top:24px;display:flex;align-items:center;gap:12px;font-family:var(--font-sans);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:rgba(201,162,74,.7);}
+.book-frame .caption .line{flex:1;height:1px;background:rgba(201,162,74,.3);}
+
+h2.title-xl{font-family:var(--font-display);font-style:italic;font-size:clamp(40px,5.5vw,72px);line-height:1;margin-top:24px;}
+h2.title-xl .nostyle{font-style:normal;}
+
+.byline{margin-top:12px;font-family:var(--font-serif);color:var(--muted);font-size:16px;}
+.byline em{color:var(--parchment-dim);}
+
+.specs{margin-top:40px;display:grid;grid-template-columns:repeat(2,1fr);gap:20px 40px;font-family:var(--font-serif);font-size:14px;}
+@media(min-width:768px){.specs{grid-template-columns:repeat(3,1fr);}}
+.specs .row{display:flex;align-items:baseline;justify-content:space-between;gap:16px;border-bottom:1px solid var(--border);padding-bottom:12px;}
+.specs dt{font-family:var(--font-sans);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);}
+.specs dd{color:var(--parchment);}
+
+.featured-cta{margin-top:48px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;}
+.btn-gold{background:var(--gold);color:var(--ink);}
+.btn-gold:hover{background:var(--parchment);}
+.btn-gold .ar{transition:transform .35s;}
+.btn-gold:hover .ar{transform:translateX(4px);}
+.read-link{font-family:var(--font-display);font-style:italic;font-size:18px;color:rgba(236,227,208,.85);text-underline-offset:8px;transition:color .3s;}
+.read-link:hover{color:var(--gold);text-decoration:underline;}
+
+/* CATEGORIES */
+.cat-section{border-top:1px solid var(--border);background:rgba(34,29,24,.4);}
+.cat-head{display:flex;flex-direction:column;gap:32px;align-items:flex-start;justify-content:space-between;}
+@media(min-width:900px){.cat-head{flex-direction:row;align-items:flex-end;}}
+.cat-head p{max-width:440px;font-size:16px;color:var(--muted);}
+.cat-grid{margin-top:64px;display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);}
+@media(min-width:768px){.cat-grid{grid-template-columns:1fr 1fr;}}
+.tile{position:relative;display:block;background:var(--ink);padding:40px;border:1px solid transparent;transition:border-color .5s,background .5s;overflow:hidden;}
+@media(min-width:768px){.tile{padding:56px;}}
+.tile::before{content:"";position:absolute;inset:0;background:radial-gradient(600px circle at var(--mx,50%) var(--my,50%),rgba(201,162,74,.09),transparent 40%);opacity:0;transition:opacity .5s;pointer-events:none;}
+.tile:hover{border-color:var(--gold);}
+.tile:hover::before{opacity:1;}
+.tile .top{display:flex;align-items:flex-start;justify-content:space-between;}
+.tile .num{font-family:var(--font-display);font-style:italic;font-size:28px;color:rgba(201,162,74,.7);}
+.tile h3{margin-top:40px;font-family:var(--font-display);font-size:36px;transition:color .4s;}
+@media(min-width:768px){.tile h3{font-size:44px;}}
+.tile:hover h3{color:var(--gold);}
+.tile p{margin-top:20px;max-width:440px;font-size:16px;color:var(--muted);}
+.tile .more{margin-top:48px;display:flex;align-items:center;gap:12px;font-family:var(--font-sans);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);}
+.tile .more .bar{height:1px;width:40px;background:var(--gold);transition:width .5s;}
+.tile:hover .more .bar{width:80px;}
+
+/* CATALOG */
+.cat-bar{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:1px solid var(--border);padding-bottom:32px;}
+.cat-bar .all{display:none;font-family:var(--font-sans);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);transition:color .3s;}
+.cat-bar .all:hover{color:var(--gold);}
+@media(min-width:768px){.cat-bar .all{display:inline-flex;}}
+
+.catalog-grid{margin-top:64px;display:grid;grid-template-columns:repeat(2,1fr);gap:64px 32px;}
+@media(min-width:900px){.catalog-grid{grid-template-columns:repeat(4,1fr);gap:64px 40px;}}
+.book-card{display:block;position:relative;transition:transform .6s cubic-bezier(.2,.7,.2,1);}
+.book-card::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .7s cubic-bezier(.2,.7,.2,1);}
+.book-card:hover{transform:translateY(-6px);}
+.book-card:hover::after{transform:scaleX(1);}
+.book-card .cover{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--ink-2);box-shadow:0 25px 45px -25px rgba(0,0,0,.9);}
+.book-card .cover img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1),filter .9s;filter:brightness(.85) saturate(.95);}
+.book-card:hover .cover img{transform:scale(1.04);filter:brightness(1) saturate(1.05);}
+.book-card .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(25,21,18,.4),transparent);}
+.book-card .meta{margin-top:24px;display:flex;align-items:baseline;justify-content:space-between;font-family:var(--font-sans);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);}
+.book-card h3{margin-top:12px;font-family:var(--font-display);font-size:24px;line-height:1.15;transition:color .35s;}
+@media(min-width:768px){.book-card h3{font-size:28px;}}
+.book-card:hover h3{color:var(--gold);}
+.book-card .author{margin-top:6px;font-family:var(--font-serif);font-style:italic;font-size:14px;color:rgba(236,227,208,.7);}
+
+/* IMPRINT */
+.imprint{border-top:1px solid var(--border);background:rgba(34,29,24,.4);}
+.imprint-grid{display:grid;grid-template-columns:1fr;gap:48px;}
+@media(min-width:900px){.imprint-grid{grid-template-columns:5fr 7fr;}}
+.imprint-grid p{font-size:18px;line-height:1.7;color:rgba(236,227,208,.85);margin-bottom:24px;}
+.imprint-grid .sig{font-family:var(--font-display);font-style:italic;font-size:20px;color:rgba(201,162,74,.9);}
+
+/* FOOTER */
+footer.site{border-top:1px solid var(--border);background:var(--ink);}
+footer.site .inner{padding:80px 0;}
+.foot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px;}
+@media(min-width:768px){.foot-grid{grid-template-columns:repeat(5,1fr);}}
+.foot-brand{grid-column:span 2;}
+.foot-brand .addr{margin-top:24px;font-family:var(--font-serif);font-size:14px;color:var(--muted);max-width:340px;}
+.foot-col h4{font-family:var(--font-sans);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:500;}
+.foot-col ul{list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:12px;font-family:var(--font-serif);font-size:14px;}
+.foot-col a{color:rgba(236,227,208,.8);transition:color .3s;}
+.foot-col a:hover{color:var(--gold);}
+.foot-end{margin-top:64px;border-top:1px solid var(--border);padding-top:32px;display:flex;flex-direction:column;gap:16px;font-family:var(--font-sans);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);}
+@media(min-width:768px){.foot-end{flex-direction:row;align-items:center;justify-content:space-between;}}
+
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <a href="#" class="brand">
+      <svg class="crest" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M24 3 L41 10 V24 C41 34 33 41 24 45 C15 41 7 34 7 24 V10 Z" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M14 18 L34 30 M34 18 L14 30" stroke="currentColor" stroke-width="1.2"/>
+        <circle cx="24" cy="24" r="3.2" stroke="currentColor" stroke-width="1.2"/>
+      </svg>
+      <div>
+        <div class="brand-name">Ironwell &amp; Vance</div>
+        <div class="brand-sub">Publishers · Est. MDCCCXCIV</div>
+      </div>
+    </a>
+    <nav class="primary">
+      <a href="#catalog">Catalogue</a>
+      <a href="#series">Series</a>
+      <a href="#imprint">Imprint</a>
+      <a href="#">Subscribe</a>
+    </nav>
+    <a href="#featured" class="btn-ghost">Reading Room</a>
+  </div>
+</header>
+
+<section class="hero">
+  <img class="hero-bg" src="assets/hero-library.jpg" alt="Antique books, military map, brass compass and candle on a mahogany desk" />
+  <div class="hero-veil"></div>
+  <div class="hero-vignette vignette"></div>
+  <div class="hero-grain paper-grain"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <div class="eyebrow imperial"><span class="line"></span><span>Volume CXXX · Spring Catalogue</span></div>
+      <h1 class="headline">
+        <span class="l1 gold-grad">Of arms,</span>
+        <span class="l2">of ledgers, and the</span>
+        <span class="l3">order of nations.</span>
+      </h1>
+      <p class="lede">For one hundred and thirty years, Ironwell &amp; Vance has set in lead and bound in cloth the definitive works on military history, statecraft, and economic thought.</p>
+      <div class="cta-row">
+        <a href="#catalog" class="btn btn-primary">View the Catalogue <span class="ar">→</span></a>
+        <a href="#featured" class="btn-link">Featured Edition</a>
+      </div>
+    </div>
+    <div class="metrics">
+      <div class="metric"><div class="n">1894</div><div class="l">Founded, London</div></div>
+      <div class="metric"><div class="n">466</div><div class="l">Titles in print</div></div>
+      <div class="metric"><div class="n">27</div><div class="l">Living authors</div></div>
+      <div class="metric"><div class="n">12</div><div class="l">Languages</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="marquee">
+  <div class="wrap row">
+    <span class="label">Reviewed in —</span>
+    <span class="item">Foreign Affairs</span>
+    <span class="item">The Economist</span>
+    <span class="item">Times Literary Supplement</span>
+    <span class="item">Foreign Policy</span>
+    <span class="item">Naval Review</span>
+    <span class="item">Wall Street Journal</span>
+  </div>
+</section>
+
+<section id="featured" class="block">
+  <div class="paper-grain" style="position:absolute;inset:0;opacity:.3;pointer-events:none;"></div>
+  <div class="wrap featured-grid">
+    <div class="book-frame">
+      <div class="glow"></div>
+      <div class="shot"><img src="assets/book-featured.jpg" alt="The Long War — first edition, navy cloth with gold-foil title" /></div>
+      <div class="caption"><span class="line"></span><span>First Edition · 1,200 copies</span><span class="line"></span></div>
+    </div>
+    <div>
+      <div class="eyebrow-mini">✦ Featured Volume</div>
+      <h2 class="title-xl"><span class="gold-grad">The Long War,</span><br/><span class="nostyle">1914 — 1991.</span></h2>
+      <p class="byline">by <span style="color:var(--parchment);">Sir Henry Ashbourne</span> · <em>Series in Strategic Theory, Vol. XIV</em></p>
+      <div class="rule-gold" style="margin-top:40px;"></div>
+      <p style="margin-top:40px;max-width:560px;font-size:18px;line-height:1.65;color:rgba(236,227,208,.85);">A singular account of the twentieth century read as one continuous conflict — from the trenches of the Marne to the dissolution of the Soviet Union. Ashbourne writes with the gravity of the historian and the precision of the strategist.</p>
+      <dl class="specs">
+        <div class="row"><dt>Pages</dt><dd>812</dd></div>
+        <div class="row"><dt>Format</dt><dd>Octavo, cloth</dd></div>
+        <div class="row"><dt>Binding</dt><dd>Smyth-sewn</dd></div>
+        <div class="row"><dt>Paper</dt><dd>Mohawk Superfine</dd></div>
+        <div class="row"><dt>Printed</dt><dd>Oxford, England</dd></div>
+        <div class="row"><dt>Price</dt><dd>£ 78.00</dd></div>
+      </dl>
+      <div class="featured-cta">
+        <a href="#" class="btn btn-gold">Reserve a Copy <span class="ar">→</span></a>
+        <a href="#" class="read-link">Read the opening chapter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="series" class="block cat-section">
+  <div class="wrap">
+    <div class="cat-head">
+      <div>
+        <div class="eyebrow-mini">✦ The Standing Series</div>
+        <h2 class="title-xl">Four libraries,<br/><span class="gold-grad nostyle">one long argument.</span></h2>
+      </div>
+      <p>Each Ironwell &amp; Vance series is curated by a sitting editor and a council of scholars. New volumes are admitted only by unanimous vote.</p>
+    </div>
+    <div class="cat-grid" id="catGrid">
+      <a href="#catalog" class="tile" data-tile><div class="top"><span class="num">№ I</span><span class="imperial-xs muted">184 titles</span></div><h3>Military History</h3><p>Campaigns, command, and the long shadow of arms — from Cannae to the Caucasus.</p><div class="more">Browse the series <span class="bar"></span></div></a>
+      <a href="#catalog" class="tile" data-tile><div class="top"><span class="num">№ II</span><span class="imperial-xs muted">127 titles</span></div><h3>Political Economy</h3><p>Classical and Austrian thought, monetary history, and the architecture of markets.</p><div class="more">Browse the series <span class="bar"></span></div></a>
+      <a href="#catalog" class="tile" data-tile><div class="top"><span class="num">№ III</span><span class="imperial-xs muted">92 titles</span></div><h3>Statecraft &amp; Diplomacy</h3><p>Treaties, intelligence, and the quiet machinery of empire and republic.</p><div class="more">Browse the series <span class="bar"></span></div></a>
+      <a href="#catalog" class="tile" data-tile><div class="top"><span class="num">№ IV</span><span class="imperial-xs muted">63 titles</span></div><h3>Strategic Theory</h3><p>Clausewitz to the present — doctrine, deterrence, and the conduct of war.</p><div class="more">Browse the series <span class="bar"></span></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="catalog" class="block">
+  <div class="wrap">
+    <div class="cat-bar">
+      <div>
+        <div class="eyebrow-mini">✦ Spring Catalogue, MMXXVI</div>
+        <h2 class="title-xl" style="font-size:clamp(36px,4.5vw,56px);margin-top:16px;">Newly bound.</h2>
+      </div>
+      <a href="#" class="all">All 466 titles →</a>
+    </div>
+    <div class="catalog-grid">
+      <a href="#" class="book-card"><div class="cover"><img src="assets/book-1.jpg" alt="Cannae, 216 B.C. — cloth-bound first edition"/></div><div class="meta"><span>№ 01</span><span>Antiquity</span></div><h3>Cannae, 216 B.C.</h3><p class="author">Aurelius Hartwood</p></a>
+      <a href="#" class="book-card"><div class="cover"><img src="assets/book-2.jpg" alt="A Concise Economics — cloth-bound first edition"/></div><div class="meta"><span>№ 02</span><span>Political Economy</span></div><h3>A Concise Economics</h3><p class="author">M. R. Forester</p></a>
+      <a href="#" class="book-card"><div class="cover"><img src="assets/book-3.jpg" alt="Eagles of the Republic — cloth-bound first edition"/></div><div class="meta"><span>№ 03</span><span>Military History</span></div><h3>Eagles of the Republic</h3><p class="author">John W. Halberd</p></a>
+      <a href="#" class="book-card"><div class="cover"><img src="assets/book-4.jpg" alt="The Gold Standard — cloth-bound first edition"/></div><div class="meta"><span>№ 04</span><span>Monetary History</span></div><h3>The Gold Standard</h3><p class="author">Elias Brenner</p></a>
+    </div>
+  </div>
+</section>
+
+<section id="imprint" class="block imprint">
+  <div class="paper-grain" style="position:absolute;inset:0;opacity:.3;pointer-events:none;"></div>
+  <div class="wrap imprint-grid">
+    <div>
+      <div class="eyebrow-mini">✦ The Imprint</div>
+      <h2 class="title-xl"><span class="gold-grad">A house built</span><br/><span class="nostyle">on lead and linen.</span></h2>
+    </div>
+    <div>
+      <p>Ironwell &amp; Vance was founded in London in 1894 by a retired naval officer and a Cambridge economist who could not agree on a single matter, save that the books of their respective fields were being printed too cheaply, and too quickly.</p>
+      <p>We print on Mohawk Superfine and Zerkall mould-made stocks. We bind in linen cloth and quarter-leather. We refuse manuscripts that cannot defend themselves before our editorial council. We have done so, without significant deviation, for one hundred and thirty years.</p>
+      <p class="sig">— The Editors, Bloomsbury &amp; New Haven</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap inner">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand">
+          <svg class="crest" viewBox="0 0 48 48" fill="none" aria-hidden="true" style="width:40px;height:40px;animation:none;">
+            <path d="M24 3 L41 10 V24 C41 34 33 41 24 45 C15 41 7 34 7 24 V10 Z" stroke="currentColor" stroke-width="1.2"/>
+            <path d="M14 18 L34 30 M34 18 L14 30" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="24" cy="24" r="3.2" stroke="currentColor" stroke-width="1.2"/>
+          </svg>
+          <div>
+            <div class="brand-name" style="font-size:20px;">Ironwell &amp; Vance</div>
+            <div class="brand-sub">Publishers · MDCCCXCIV</div>
+          </div>
+        </div>
+        <p class="addr">19 Bedford Square, London WC1B<br/>48 Whitney Avenue, New Haven CT</p>
+      </div>
+      <div class="foot-col"><h4>Series</h4><ul><li><a href="#">Military History</a></li><li><a href="#">Political Economy</a></li><li><a href="#">Statecraft</a></li><li><a href="#">Strategic Theory</a></li></ul></div>
+      <div class="foot-col"><h4>House</h4><ul><li><a href="#">Imprint</a></li><li><a href="#">Editors</a></li><li><a href="#">Press</a></li><li><a href="#">Trade</a></li></ul></div>
+      <div class="foot-col"><h4>Reader</h4><ul><li><a href="#">Subscribe</a></li><li><a href="#">Standing Order</a></li><li><a href="#">Gift</a></li><li><a href="#">Contact</a></li></ul></div>
+    </div>
+    <div class="foot-end">
+      <span>© MMXXVI Ironwell &amp; Vance. All rights reserved.</span>
+      <span>Set in Cormorant &amp; EB Garamond · Printed in England</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Cursor-tracked glow on category tiles
+  document.getElementById('catGrid')?.addEventListener('mousemove', (e) => {
+    const tile = e.target.closest('[data-tile]');
+    if (!tile) return;
+    const r = tile.getBoundingClientRect();
+    tile.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    tile.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  });
+</script>
+</body>
+</html>
